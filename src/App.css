@@ -249,7 +249,9 @@
   .wrapper--w680 {
     max-width: 680px;
   }
-  
+  .wrapper--w1000 {
+    max-width: 1000px;
+  }
   /* ==========================================================================
      #BUTTON
      ========================================================================== */
@@ -368,7 +370,7 @@
   
   .input--style-4 {
     line-height: 50px;
-    background: #fafafa;
+    background: #f1f1f1;
     -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
     -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
     box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);

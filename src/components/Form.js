@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { register } from "../actions/detail";
 import Capture from "../img/Capture.PNG"
-import Capture1 from "../img/Capture1.PNG"
-import Capture3 from "../img/Capture3.PNG"
 
 import PropTypes from "prop-types";
 
@@ -32,7 +30,7 @@ const Form = ({register, registration}) => {
   return (
       (!registration?
     <div className="page-wrapper bg-gra-02 p-t-50 p-b-100 font-poppins">
-      <div className="wrapper wrapper--w680">
+      <div className="wrapper wrapper--w1000">
         <div className="card card-4">
           <div className="card-body">
             <h2 className="title">Registration Form</h2>
