@@ -15,7 +15,7 @@ const detailSchema = new Schema({
         required: true
     },
     phone:{
-        type: Number,
+        type: String,
         required: true
     },
     branch:{
