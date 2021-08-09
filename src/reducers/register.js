@@ -3,7 +3,7 @@ import { REGISTERED_SUCCESSFULLY, ERROR } from "../actions/types"
 
 const initialState = {
     loading: true,
-    registration: false,
+    registration: true,
     error:{},
 }
 

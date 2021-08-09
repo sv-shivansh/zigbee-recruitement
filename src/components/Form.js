@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router";
 import { register } from "../actions/detail";
+import Capture from "../img/Capture.PNG"
+import Capture1 from "../img/Capture1.PNG"
+import Capture3 from "../img/Capture3.PNG"
+
 import PropTypes from "prop-types";
 
 const Form = ({register, registration}) => {
@@ -179,12 +182,18 @@ const Form = ({register, registration}) => {
           </div>
         </div>
       </div>
-    </div>:
-    <div class="jumbotron text-center">
-  <h1 class="display-3">Thank You!</h1><hr />
-  <p class="lead"><strong>Your Response</strong> has been recorded successfully</p>
-  <hr />
-</div>)
+    </div>:<section class="bg-new">
+    <div class="container">
+      <div class ="card">
+        <div class ="content">
+          <div class="imgBx"><img src={Capture} alt="zigbee logo"/></div>
+          <div class ="contentBx">
+            <h2>Thank You<br /><span>Your Response has been recorded successfully</span></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>)
   );
 };
 
