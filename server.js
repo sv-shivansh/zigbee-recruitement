@@ -3,7 +3,6 @@ const express = require("express");
 const connectDB = require("./server/config/db");
 const { check, validationResult } = require("express-validator");
 const Detail = require("./server/models/details");
-const { defaultMaxListeners } = require("stream");
 const app = express();
 
 connectDB();

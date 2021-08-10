@@ -34,7 +34,7 @@ const Form = ({register, registration}) => {
       <div className="wrapper wrapper--w1000">
         <div className="card card-4">
           <div className="card-body">
-            <h2 className="title">Registration Form</h2>
+            <h2 className="title">Zigbee Registration Form</h2>
             <div className="details">
               <p>
                 The positions will be handled by the current members and the
