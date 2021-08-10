@@ -13,6 +13,10 @@ app.use(express.json({ extended: false }));
 app.get("/api", async (req, res) => {
   res.send("API RUNNING");
 });
+app.get("/api/getdata", async(req,res) => {
+  let details = await Detail.find()
+  res.send(details)
+})
 
 app.post(
   "/api/register",
@@ -40,6 +44,8 @@ app.post(
       semester,
       ques1,
       ques2,
+      github,
+      skills
     } = req.body;
     try {
       let detail = await Detail.findOne({ usn });
@@ -49,7 +55,7 @@ app.post(
           .json({
             errors: [
               {
-                msg: "Response already submitted. If done by mistake contact the administrator",
+                msg: "Response already submitted. If done by mistake contact the administrator (+91 9634244604)",
               },
             ],
           });
@@ -63,6 +69,8 @@ app.post(
         semester,
         ques1,
         ques2,
+        github,
+        skills
       });
       await detail.save();
       res.json({ msg: "Response Successfully recorded" });

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { register } from "../actions/detail";
 import Capture from "../img/Capture.PNG"
-
 import PropTypes from "prop-types";
 
 const Form = ({register, registration}) => {
@@ -15,13 +14,15 @@ const Form = ({register, registration}) => {
     usn: "",
     ques1: "",
     ques2: "",
+    github:"",
+    skills:""
   });
-  let { name, email, phone, semester, branch, usn, ques1, ques2 } = formData;
+  let { name, email, phone, semester, branch, usn, ques1, ques2, github, skills } = formData;
   const onSubmit = async (e) => {
     e.preventDefault();
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    register({ name, email, phone, semester, branch, usn, ques1, ques2})
+    register({ name, email, phone, semester, branch, usn, ques1, ques2, github, skills})
     console.log(formData, registration);
   };
   const onChange = (e) => {
@@ -146,6 +147,33 @@ const Form = ({register, registration}) => {
                   </div>
                 </div>
               </div>
+              <div className="row row-space">
+                <div className="col-2">
+                  <div className="input-group">
+                    <label className="label">GitHub Link (If applicable)</label>
+                    <input
+                      className="input--style-4"
+                      type="github"
+                      name="github"
+                      value={github}
+                      onChange={(e) => onChange(e)}
+                    ></input>
+                  </div>
+                </div>
+                <div className="col-2">
+                  <div className="input-group">
+                    <label className="label">Technical Skills (if any)</label>
+                    <input
+                      placeholder="Graphic Designer, Programmer(C/Python) etc"
+                      className="input--style-4"
+                      type="skills"
+                      name="skills"
+                      value={skills}
+                      onChange={(e) => onChange(e)}
+                    ></input>
+                  </div>
+                </div>
+              </div>
               <div className="input-group">
                 <label className="label">
                   Why do you want to be a part of this Club?
@@ -160,8 +188,7 @@ const Form = ({register, registration}) => {
               </div>
               <div className="input-group">
                 <label className="label">
-                  What is that special skill/ability that make you look
-                  different from the crowd?
+                How can you contribute in the working of the club?
                 </label>
                 <input
                   className="input--style-4"

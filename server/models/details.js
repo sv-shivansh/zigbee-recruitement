@@ -34,6 +34,12 @@ const detailSchema = new Schema({
         type: String,
         required: true
     },
+    github:{
+        type: String,
+    },
+    skills:{
+        type: String,
+    },
     date:{
         type: Date,
         default: Date.now
