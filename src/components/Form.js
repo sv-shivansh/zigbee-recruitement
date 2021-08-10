@@ -38,17 +38,16 @@ const Form = ({register, registration}) => {
             <div className="details">
               <p>
                 The positions will be handled by the current members and the
-                newly selected members for the position will be decided based on
+                newly selected members and the position will be decided based on
                 their performance throughout the semester.
               </p>
               <p> The basic criteria for the selection :</p>
-              <p> • Participation in previously conducted activities</p>
               <p> • Introducing new ideas related to the club</p>
               <p> • Attempt at socializing with people.</p>
               <p> • Managing curricular and co-curricular balance.</p>
               <p>
                 {" "}
-                • Innovation and Creativity and zeal to do work and get work
+                • Innovation, Creativity and zeal to do the work and get the work
                 done.
               </p>
             </div>
