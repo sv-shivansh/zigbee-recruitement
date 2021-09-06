@@ -17,12 +17,12 @@ const Form = ({register, registration}) => {
     github:"",
     skills:""
   });
-  let { name, email, phone, semester, branch, usn, ques1, ques2, github, skills } = formData;
+  let { name, email, phone, semester, branch, usn } = formData;
   const onSubmit = async (e) => {
     e.preventDefault();
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    register({ name, email, phone, semester, branch, usn, ques1, ques2, github, skills})
+    register({ name, email, phone, semester, branch, usn})
     console.log(formData, registration);
   };
   const onChange = (e) => {
@@ -146,57 +146,6 @@ const Form = ({register, registration}) => {
                   </div>
                 </div>
               </div>
-              <div className="row row-space">
-                <div className="col-2">
-                  <div className="input-group">
-                    <label className="label">GitHub Link (If applicable)</label>
-                    <input
-                      className="input--style-4"
-                      type="github"
-                      name="github"
-                      value={github}
-                      onChange={(e) => onChange(e)}
-                    ></input>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="input-group">
-                    <label className="label">Technical Skills (if any)</label>
-                    <input
-                      placeholder="Graphic Designer, Programmer(C/Python) etc"
-                      className="input--style-4"
-                      type="skills"
-                      name="skills"
-                      value={skills}
-                      onChange={(e) => onChange(e)}
-                    ></input>
-                  </div>
-                </div>
-              </div>
-              <div className="input-group">
-                <label className="label">
-                  Why do you want to be a part of this Club?
-                </label>
-                <input
-                  className="input--style-4"
-                  type="text"
-                  name="ques1"
-                  value={ques1}
-                  onChange={(e) => onChange(e)}
-                ></input>
-              </div>
-              <div className="input-group">
-                <label className="label">
-                How can you contribute in the working of the club?
-                </label>
-                <input
-                  className="input--style-4"
-                  type="text"
-                  name="ques2"
-                  value={ques2}
-                  onChange={(e) => onChange(e)}
-                ></input>
-              </div>
               <div className="p-t-15">
                 <button className="btn btn--radius-2 btn--blue" type="submit">
                   Submit
@@ -212,7 +161,8 @@ const Form = ({register, registration}) => {
         <div class ="content">
           <div class="imgBx"><img src={Capture} alt="zigbee logo"/></div>
           <div class ="contentBx">
-            <h2>Thank You<br /><span>Your Response has been recorded successfully</span></h2>
+            <h2>Thank You<br /><span>You have Successfully registered for the event</span></h2><br/>
+            <span class="small">All the details will be sent to you via Email</span>
           </div>
         </div>
       </div>
