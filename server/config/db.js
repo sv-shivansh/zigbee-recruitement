@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 require('dotenv').config()
 
-const uri = `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0.lmbjl.mongodb.net/${process.env.MONGO_DB_DATABASE}?retryWrites=true&w=majority`
+const uri = `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0.ezfet.mongodb.net/${process.env.MONGO_DB_DATABASE}?retryWrites=true&w=majority`
 const connectDB = async() =>{
     try{
         await mongoose.connect(uri,{

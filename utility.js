@@ -5,7 +5,7 @@ async function convert(res){
     const csv = new ObjectsToCsv(res);
    
     // Save to file:
-    await csv.toDisk('./test.csv');
+    await csv.toDisk('./test_new.csv');
    
     // Return the CSV file as string:
     // console.log(await csv.toString());
