@@ -33,4 +33,4 @@ const detailSchema = new Schema({
 })
 
 // eslint-disable-next-line no-undef
-module.exports = Participant = mongoose.model('detail', detailSchema)
+module.exports = Participant = mongoose.model('participant', detailSchema)
