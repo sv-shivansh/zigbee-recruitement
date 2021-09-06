@@ -5,7 +5,7 @@ async function convert(res){
     const csv = new ObjectsToCsv(res);
    
     // Save to file:
-    await csv.toDisk('./test_new.csv');
+    await csv.toDisk('./test.csv');
    
     // Return the CSV file as string:
     // console.log(await csv.toString());
@@ -14,7 +14,6 @@ try{
 axios.get("http://localhost:5000/api/getdata").then((res) => {
     console.log(res)
     convert(res.data)
-    
 })
 .catch(function (error) {
     // handle error
