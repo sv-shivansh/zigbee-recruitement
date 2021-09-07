@@ -48,7 +48,7 @@ app.post(
           .json({
             errors: [
               {
-                msg: "Response already submitted. If done by mistake contact the administrator (+91 9634244604)",
+                msg: "Response already submitted. If done by mistake contact the Zigbee Team.",
               },
             ],
           });
