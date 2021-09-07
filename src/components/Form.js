@@ -49,7 +49,7 @@ const Form = ({register, registration}) => {
               <div className="row row-space">
                 <div className="col-2">
                   <div className="input-group">
-                    <label className="label">Full name</label>
+                    <label className="label">Full Name<span>*</span></label>
                     <input
                       className="input--style-4"
                       type="text"
@@ -61,7 +61,7 @@ const Form = ({register, registration}) => {
                 </div>
                 <div className="col-2">
                   <div className="input-group">
-                    <label className="label">USN</label>
+                    <label className="label">USN<span>*</span></label>
                     <input
                       className="input--style-4"
                       type="text"
@@ -75,7 +75,7 @@ const Form = ({register, registration}) => {
               <div className="row row-space">
                 <div className="col-2">
                   <div className="input-group">
-                    <label className="label">Branch</label>
+                    <label className="label">Branch<span>*</span></label>
                     <input
                       className="input--style-4"
                       type="text"
@@ -88,7 +88,7 @@ const Form = ({register, registration}) => {
                 </div>
                 <div className="col-2">
                   <div className="input-group">
-                    <label className="label">Semester</label>
+                    <label className="label">Semester<span>*</span></label>
                     <div className="p-t-10">
                       <label className="radio-container m-r-45">
                         3
@@ -117,7 +117,7 @@ const Form = ({register, registration}) => {
               <div className="row row-space">
                 <div className="col-2">
                   <div className="input-group">
-                    <label className="label">Email (College Official ID)</label>
+                    <label className="label">Email (College Official ID)<span>*</span></label>
                     <input
                       className="input--style-4"
                       type="email"
@@ -129,7 +129,7 @@ const Form = ({register, registration}) => {
                 </div>
                 <div className="col-2">
                   <div className="input-group">
-                    <label className="label">Phone Number</label>
+                    <label className="label">Phone Number (WhatsApp)<span>*</span></label>
                     <input
                       className="input--style-4"
                       type="text"

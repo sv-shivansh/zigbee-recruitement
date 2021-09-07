@@ -718,6 +718,10 @@
     opacity: 1;
     transition: 0.5s;
   }
+
+  label span{
+    color: red;
+  }
   
   .container .card:hover .content{
     opacity: 1;
