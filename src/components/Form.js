@@ -34,22 +34,16 @@ const Form = ({register, registration}) => {
       <div className="wrapper wrapper--w1000">
         <div className="card card-4">
           <div className="card-body">
-            <h2 className="title">Zigbee Registration Form</h2>
+            <h2 className="title">4 Days 4 Projects</h2>
             <div className="details">
               <p>
-                The positions will be handled by the current members and the
-                newly selected members and the position will be decided based on
-                their performance throughout the semester.
+              Let’s make some projects that will help in your resume and allow you to gain some practical knowledge with Web Development fundamentals and technologies. .
               </p>
-              <p> The basic criteria for the selection :</p>
-              <p> • Introducing new ideas related to the club</p>
-              <p> • Attempt at socializing with people.</p>
-              <p> • Managing curricular and co-curricular balance.</p>
-              <p>
-                {" "}
-                • Innovation, Creativity and zeal to do the work and get the work
-                done.
-              </p>
+              <p> The projects what you are going to develop are :</p>
+              <p> • Day 1: Random Color Generator [11 Sept'21]</p>
+              <p> • Day 2: Stopwatch [11 Sept'21]</p>
+              <p> • Day 3: Todo List With FireBase [18 Sept'21]</p>
+              <p> • Day 4: Client Server Architecture w/ API Calls [19 Sept'21]</p>
             </div>
             <form id="form" onSubmit={(e) => onSubmit(e)}>
               <div className="row row-space">
