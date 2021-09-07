@@ -84,7 +84,7 @@ const Form = ({ register, registration }) => {
               <Typewriter
                 options={{
                   cursor: "",
-                  delay: 50,
+                  delay: 25,
                 }}
                 onInit={(typewriter) => {
                   typewriter
@@ -103,7 +103,7 @@ const Form = ({ register, registration }) => {
               <Typewriter
                 options={{
                   cursor: "",
-                  delay: 50,
+                  delay: 25,
                 }}
                 onInit={(typewriter) => {
                   typewriter
@@ -121,7 +121,7 @@ const Form = ({ register, registration }) => {
               <Typewriter
                 options={{
                   cursor: "",
-                  delay: 50,
+                  delay: 25,
                 }}
                 onInit={(typewriter) => {
                   typewriter
@@ -139,7 +139,7 @@ const Form = ({ register, registration }) => {
               <Typewriter
                 options={{
                   cursor: "",
-                  delay: 50,
+                  delay: 25,
                 }}
                 onInit={(typewriter) => {
                   typewriter
@@ -148,7 +148,6 @@ const Form = ({ register, registration }) => {
                       console.log("String typed out!");
                     })
                     .pauseFor(250)
-
                     .start();
                 }}
               />
@@ -157,7 +156,7 @@ const Form = ({ register, registration }) => {
               <Typewriter
                 options={{
                   cursor: "",
-                  delay: 50,
+                  delay: 25,
                 }}
                 onInit={(typewriter) => {
                   typewriter
@@ -175,11 +174,7 @@ const Form = ({ register, registration }) => {
                 }}
               />
             </p>
-            {/* <p> The projects what you are going to develop are :</p>
-              <p> • Day 1: Random Color Generator [11 Sept'21]</p>
-              <p> • Day 2: Stopwatch [12 Sept'21]</p>
-              <p> • Day 3: Todo List With FireBase [18 Sept'21]</p>
-              <p> • Day 4: Client Server Architecture w/ API Calls [19 Sept'21]</p> */}
+             {/* • Day 4: Client Server Architecture w/ API Calls [19 Sept'21]</p>  */}
           </div>
         </div>
       </div>
@@ -477,8 +472,7 @@ const Form = ({ register, registration }) => {
           <Typewriter
             options={{
               cursor: "|",
-              delay: 50,
-              loop: true
+              delay: 20,
             }}
             onInit={(typewriter) => {
               typewriter
@@ -487,7 +481,6 @@ const Form = ({ register, registration }) => {
                   console.log("String typed out!");
                 })
                 .pauseFor(500)
-                .deleteAll()
                 .typeString(
                   "You'll Soon recieve an Email to your registered mail ID with all the details regarding the Event."
                 )

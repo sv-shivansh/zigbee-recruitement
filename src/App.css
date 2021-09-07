@@ -558,7 +558,7 @@ input {
 
 .thank{
   color:white;
-  font-size: 35px;
+  font-size: 30px;
   align-items: center;
 }
 
@@ -750,6 +750,7 @@ background: linear-gradient(to right, #db36a4, #f7ff00); /* W3C, IE 10+/ Edge, F
 .details {
   color: #fff;
   font-size: 15px;
+  letter-spacing: 1.5px;
   margin:0
 }
 
