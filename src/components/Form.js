@@ -107,7 +107,7 @@ const Form = ({ register, registration }) => {
                 }}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString("• Day 1: Random Color Generator [11 Sept'21]")
+                    .typeString("• Day 1: Random Color Selector [11 Sept'21]")
                     .callFunction(() => {
                       console.log("String typed out!");
                     })
@@ -143,7 +143,7 @@ const Form = ({ register, registration }) => {
                 }}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString("• Day 3: Todo List With FireBase [18 Sept'21]")
+                    .typeString("• Day 3: Rock-Scissors-Paper Game [18 Sept'21]")
                     .callFunction(() => {
                       console.log("String typed out!");
                     })
@@ -161,7 +161,7 @@ const Form = ({ register, registration }) => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
-                      " • Day 4: Client Server Architecture w/ API Calls [19 Sept'21]"
+                      " • Day 4: Todo List With FireBase [19 Sept'21]"
                     )
                     .callFunction(() => {
                       console.log("String typed out!");
