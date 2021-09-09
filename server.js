@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const connectDB = require("./server/config/db");
 const { check, validationResult } = require("express-validator");
-const Participant = require("./server/models/participant");
+const Feedback = require("./server/models/feedback");
 const app = express();
 
 connectDB();
@@ -13,7 +13,7 @@ app.get("/api", async (req, res) => {
   res.send("API RUNNING");
 });
 app.get("/api/getdata", async(req,res) => {
-  let details = await Participant.find()
+  let details = await Feedback.find()
   res.send(details)
 })
 
@@ -23,9 +23,10 @@ app.post(
     check("name", "Name is required").not().isEmpty(),
     check("usn", "USN is required").not().isEmpty(),
     check("email", "Email is required").not().isEmpty(),
-    check("phone", "Phone Number is required").not().isEmpty(),
     check("branch", "Branch is required").not().isEmpty(),
     check("semester", "Semester is required").not().isEmpty(),
+    check("rating", "Rating is required").not().isEmpty(),
+    check("feedback", "Feedback is required").not().isEmpty(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -36,12 +37,14 @@ app.post(
       name,
       usn,
       email,
-      phone,
       branch,
       semester,
+      rating,
+      feedback,
+      suggestion
     } = req.body;
     try {
-      let detail = await Participant.findOne({ usn });
+      let detail = await Feedback.findOne({ usn });
       if (detail) {
         return res
           .status(400)
@@ -53,13 +56,15 @@ app.post(
             ],
           });
       }
-      detail = new Participant({
+      detail = new Feedback({
         name,
         usn,
         email,
-        phone,
         branch,
         semester,
+        rating,
+        feedback,
+        suggestion
       });
       await detail.save();
       res.json({ msg: "Response Successfully recorded" });

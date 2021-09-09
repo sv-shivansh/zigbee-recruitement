@@ -2,13 +2,13 @@ import axios from "axios"
 import { setAlert } from './alert';
 import { REGISTERED_SUCCESSFULLY, ERROR } from "./types";
 
-export const register = ({name, email, phone, semester, branch, usn, ques1, ques2, github, skills}) => async dispatch => {
+export const register = ({name, email, semester, branch, usn, rating,feedback, suggestion}) => async dispatch => {
     const config = {
         headers: {
             'Content-Type': 'application/json'
         }
     }
-    const body = JSON.stringify({name, email, phone, semester, branch, usn})
+    const body = JSON.stringify({name, email, semester, branch, usn, rating,feedback, suggestion})
     try{
         const res = await axios.post('/api/register', body, config)
         dispatch({

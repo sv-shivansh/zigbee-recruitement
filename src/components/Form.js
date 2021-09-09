@@ -8,21 +8,19 @@ const Form = ({register, registration}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
     semester: "",
     branch: "",
     usn: "",
-    ques1: "",
-    ques2: "",
-    github:"",
-    skills:""
+    rating:"",
+    feedback:"",
+    suggestion:""
   });
-  let { name, email, phone, semester, branch, usn } = formData;
+  let { name, email, semester, branch, usn, rating,feedback, suggestion } = formData;
   const onSubmit = async (e) => {
     e.preventDefault();
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    register({ name, email, phone, semester, branch, usn})
+    register({ name, email, semester, branch, usn, rating,feedback, suggestion})
     console.log(formData, registration);
   };
   const onChange = (e) => {
@@ -34,8 +32,8 @@ const Form = ({register, registration}) => {
       <div className="wrapper wrapper--w1000">
         <div className="card card-4">
           <div className="card-body">
-            <h2 className="title">4 Days 4 Projects</h2>
-            <div className="details">
+            <h2 className="title">4 Days 4 Projects (Day 1 Feedback)</h2>
+            {/* <div className="details">
               <p>
               Let’s make some projects that will help in your resume and allow you to gain some practical knowledge with Web Development fundamentals and technologies. .
               </p>
@@ -44,7 +42,7 @@ const Form = ({register, registration}) => {
               <p> • Day 2: Stopwatch [11 Sept'21]</p>
               <p> • Day 3: Todo List With FireBase [18 Sept'21]</p>
               <p> • Day 4: Client Server Architecture w/ API Calls [19 Sept'21]</p>
-            </div>
+            </div> */}
             <form id="form" onSubmit={(e) => onSubmit(e)}>
               <div className="row row-space">
                 <div className="col-2">
@@ -129,12 +127,38 @@ const Form = ({register, registration}) => {
                 </div>
                 <div className="col-2">
                   <div className="input-group">
-                    <label className="label">Phone Number (WhatsApp)<span>*</span></label>
+                    <label className="label">Rating(Out of 5)<span>*</span></label>
                     <input
                       className="input--style-4"
                       type="text"
-                      name="phone"
-                      value={phone}
+                      name="rating"
+                      value={rating}
+                      onChange={(e) => onChange(e)}
+                    ></input>
+                  </div>
+                </div>
+              </div>
+              <div className="row row-space">
+                <div className="col-2">
+                  <div className="input-group">
+                    <label className="label">Feedback<span>*</span></label>
+                    <input
+                      className="input--style-4"
+                      type="text"
+                      name="feedback"
+                      value={feedback}
+                      onChange={(e) => onChange(e)}
+                    ></input>
+                  </div>
+                </div>
+                <div className="col-2">
+                  <div className="input-group">
+                    <label className="label">Area of Improvement/ Suggestion</label>
+                    <input
+                      className="input--style-4"
+                      type="text"
+                      name="suggestion"
+                      value={suggestion}
                       onChange={(e) => onChange(e)}
                     ></input>
                   </div>
@@ -155,8 +179,8 @@ const Form = ({register, registration}) => {
         <div class ="content">
           <div class="imgBx"><img src={Capture} alt="zigbee logo"/></div>
           <div class ="contentBx">
-            <h2>Thank You<br /><span>You have Successfully registered for the event</span></h2><br/>
-            <span class="small">All the details will be sent to you via Email</span>
+            <h2>Thank You for your valuable Feedback<br /><span>Your Response has been recorded Successfully.</span></h2><br/>
+            <span class="small">Regards,<br /> Team Zigbee</span>
           </div>
         </div>
       </div>

@@ -14,10 +14,6 @@ const detailSchema = new Schema({
         type: String,
         required: true
     },
-    phone:{
-        type: String,
-        required: true
-    },
     branch:{
         type: String,
         required: true
@@ -26,6 +22,17 @@ const detailSchema = new Schema({
         type: Number,
         required: true
     },
+    rating:{
+        type: Number,
+        required: true
+    },
+    feedback:{
+        type: String,
+        required: true
+    },
+    suggestion:{
+        type: String,
+    },
     date:{
         type: Date,
         default: Date.now
@@ -33,4 +40,4 @@ const detailSchema = new Schema({
 })
 
 // eslint-disable-next-line no-undef
-module.exports = Participant = mongoose.model('participant', detailSchema)
+module.exports = Feedback = mongoose.model('feedback_day_1', detailSchema)
