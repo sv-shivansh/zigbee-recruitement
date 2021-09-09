@@ -23,7 +23,7 @@ const detailSchema = new Schema({
         required: true
     },
     rating:{
-        type: Number,
+        type: String,
         required: true
     },
     feedback:{
@@ -40,4 +40,4 @@ const detailSchema = new Schema({
 })
 
 // eslint-disable-next-line no-undef
-module.exports = Feedback = mongoose.model('feedback_day_1', detailSchema)
+module.exports = Feedback = mongoose.model('feedback_day_2', detailSchema)
