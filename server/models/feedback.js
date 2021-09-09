@@ -40,4 +40,4 @@ const detailSchema = new Schema({
 })
 
 // eslint-disable-next-line no-undef
-module.exports = Feedback = mongoose.model('feedback_day_1', detailSchema)
+module.exports = Feedback = mongoose.model('feedback_day_3', detailSchema)
