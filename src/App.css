@@ -130,6 +130,9 @@
   }
 
   .bg-new{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     background: #161623;
   }
   
@@ -248,6 +251,9 @@
   
   .wrapper--w680 {
     max-width: 680px;
+  }
+  .wrapper--w800 {
+    max-width: 800px;
   }
   .wrapper--w1000 {
     max-width: 1000px;
@@ -712,6 +718,10 @@
     opacity: 1;
     transition: 0.5s;
   }
+
+  label span{
+    color: red;
+  }
   
   .container .card:hover .content{
     opacity: 1;
@@ -731,8 +741,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     text-align: center;
     color: antiquewhite;
+  }
+
+  span.small{
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    text-shadow: tomato 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
   }
   
   .alert-danger {

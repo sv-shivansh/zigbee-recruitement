@@ -26,20 +26,6 @@ const detailSchema = new Schema({
         type: Number,
         required: true
     },
-    ques1:{
-        type: String,
-        required: true
-    },
-    ques2:{
-        type: String,
-        required: true
-    },
-    github:{
-        type: String,
-    },
-    skills:{
-        type: String,
-    },
     date:{
         type: Date,
         default: Date.now
@@ -47,4 +33,4 @@ const detailSchema = new Schema({
 })
 
 // eslint-disable-next-line no-undef
-module.exports = Detail = mongoose.model('detail', detailSchema)
+module.exports = Participant = mongoose.model('participant', detailSchema)

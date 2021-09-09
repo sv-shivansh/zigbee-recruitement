@@ -8,7 +8,7 @@ export const register = ({name, email, phone, semester, branch, usn, ques1, ques
             'Content-Type': 'application/json'
         }
     }
-    const body = JSON.stringify({name, email, phone, semester, branch, usn, ques1, ques2, github, skills})
+    const body = JSON.stringify({name, email, phone, semester, branch, usn})
     try{
         const res = await axios.post('/api/register', body, config)
         dispatch({

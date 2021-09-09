@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const connectDB = require("./server/config/db");
 const { check, validationResult } = require("express-validator");
-const Detail = require("./server/models/details");
+const Participant = require("./server/models/participant");
 const app = express();
 
 connectDB();
@@ -13,7 +13,7 @@ app.get("/api", async (req, res) => {
   res.send("API RUNNING");
 });
 app.get("/api/getdata", async(req,res) => {
-  let details = await Detail.find()
+  let details = await Participant.find()
   res.send(details)
 })
 
@@ -26,8 +26,6 @@ app.post(
     check("phone", "Phone Number is required").not().isEmpty(),
     check("branch", "Branch is required").not().isEmpty(),
     check("semester", "Semester is required").not().isEmpty(),
-    check("ques1", "Answering the questions is necessary").not().isEmpty(),
-    check("ques2", "Answering the questions is necessary").not().isEmpty(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -41,35 +39,27 @@ app.post(
       phone,
       branch,
       semester,
-      ques1,
-      ques2,
-      github,
-      skills
     } = req.body;
     try {
-      let detail = await Detail.findOne({ usn });
+      let detail = await Participant.findOne({ usn });
       if (detail) {
         return res
           .status(400)
           .json({
             errors: [
               {
-                msg: "Response already submitted. If done by mistake contact the administrator (+91 9634244604)",
+                msg: "Response already submitted. If done by mistake contact the Zigbee Team.",
               },
             ],
           });
       }
-      detail = new Detail({
+      detail = new Participant({
         name,
         usn,
         email,
         phone,
         branch,
         semester,
-        ques1,
-        ques2,
-        github,
-        skills
       });
       await detail.save();
       res.json({ msg: "Response Successfully recorded" });
