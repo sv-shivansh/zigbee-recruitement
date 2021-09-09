@@ -32,7 +32,7 @@ const Form = ({register, registration}) => {
       <div className="wrapper wrapper--w1000">
         <div className="card card-4">
           <div className="card-body">
-            <h2 className="title">4 Days 4 Projects (Day 1 Feedback)[Random Color Selector]</h2>
+            <h2 className="title">4 Days 4 Projects (Day 4 Feedback)[Todo List With FireBase]</h2>
             {/* <div className="details">
               <p>
               Let’s make some projects that will help in your resume and allow you to gain some practical knowledge with Web Development fundamentals and technologies. .
